@@ -1,0 +1,15 @@
+Package: @PACKAGE@
+Version: @VERSION@
+Architecture: @ARCH@
+Maintainer: @MAINTAINER@
+Installed-Size: @INSTALLED_SIZE@
+Section: utils
+Priority: optional
+Depends: @DEPENDS@
+Description: toybox multi-call binary (all applets)
+ toybox is a single multi-call binary implementing common Unix utilities.
+ .
+ This package installs the dynamically linked /system/bin/toybox plus one
+ symbolic link per applet, so all of its commands are available from
+ /system/bin. Runtime dependencies are generated from the binary's ELF
+ NEEDED entries (bionic provides libc/libm/libdl).

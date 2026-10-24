@@ -88,3 +88,7 @@ help::
 	@echo  ''
 	@echo  'example: CFLAGS="--static" CROSS_COMPILE=armv5l- make defconfig toybox install'
 	@echo  ''
+
+# Opt-in .deb packaging targets (make deb / make deb-static).
+# Never pulled in by the default target or by the AOSP build.
+-include deb.mk

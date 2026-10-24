@@ -1,0 +1,15 @@
+Package: @PACKAGE@
+Version: @VERSION@
+Architecture: @ARCH@
+Maintainer: @MAINTAINER@
+Installed-Size: @INSTALLED_SIZE@
+Section: utils
+Priority: optional
+Conflicts: toybox
+Replaces: toybox
+Description: toybox multi-call binary (static, single file)
+ toybox is a single multi-call binary implementing common Unix utilities.
+ .
+ This package installs only the statically linked /system/bin/toybox binary.
+ It has no runtime dependencies and no applet symlinks; invoke applets as
+ "toybox <applet>" (or create the symlinks yourself).

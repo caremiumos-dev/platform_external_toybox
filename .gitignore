@@ -15,3 +15,5 @@ change/
 /kconfig
 toybox
 toybox_unstripped
+/out-deb/
+/*.deb
