@@ -26,7 +26,8 @@ DEB_TOYBOX_STATIC := $(DEB_PRODUCT_OUT)/recovery/root/sbin/toybox_static
 DEB_WORK := $(CURDIR)/out-deb
 
 DEB_VERSION := $(shell sed -n 's/^#define TOYBOX_VERSION "\(.*\)"/\1/p' $(CURDIR)/main.c)-android
-DEB_ARCH := armhf
+# 架构映射（TARGET_ARCH / libc.so 推断 / 默认 arm，学 Debian：arm64 不是 aarch64）
+include $(DEB_TOP)/build/make/tools/deb/arch.mk
 DEB_MAINTAINER := CaremiumOS Developers <caremium-os@googlegroups.com>
 
 # bionic 版本跟随平台实际版本（build/make/core/version_defaults.mk）
